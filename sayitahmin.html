@@ -1,0 +1,176 @@
+
+<!--Necdet Yazilimlari-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<script src="nec.js"></script><script src="../nec.js"></script><script src="hesapla.js"></script><div style="display:none;" id="ustBosluk"><br><br><br><br><br><br><br></div><center><div id="aciklama" class="kutu vurgu"><h1>Say&#305; Tahmin Oyunu</h1>Akl&#305;n&#305;zdan 0 ile 85 aras&#305;nda bir say&#305; tutun.<br>Tuttu&#287;unuz say&#305;y&#305; g&#246;r&#252;rseniz kutular&#305;n &#252;st&#252;ne t&#305;klay&#305;n.<br>En sonunda sayfay&#305; yukar&#305; do&#287;ru kayd&#305;r&#305;n ve en alttaki butona bas&#305;n.<br>;)<br><br><input type="button" value="Tamam, Ba&#351;layal&#305;m" onclick="getid('aciklama').style.display='none';getid('oyun').style.display='block';" /></div><table id="oyun" class="b1 cont"><tr><td><div id="chtd1" onclick="ch('ch1','chtd1',1);" class="chDiv">1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 48 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85<input id="ch1" type="checkbox" class="gizli" /><!-- input button //--></div></td><td><div id="chtd2" onclick="ch('ch2','chtd2',1);" class="chDiv">2 3 6 7 10 11 14 15 18 19 22 23 26 27 30 31 34 35 38 39 42 43 46 47 50 51 54 55 58 59 62 63 66 67 70 71 74 75 78 79 82 83<input id="ch2" type="checkbox" class="gizli" /><!-- input button //--></div></td><td><div id="chtd3" onclick="ch('ch3','chtd3',1);" class="chDiv">4 5 6 7 12 13 14 15 20 21 22 23 28 29 30 31 36 37 38 39 44 45 46 47 52 53 54 55 60 61 62 63 68 69 70 71 76 77 78 79 84 85<input id="ch3" type="checkbox" class="gizli" /><!-- input button //--></div></td></tr><tr><td><div id="chtd4" onclick="ch('ch4','chtd4',1);" class="chDiv">8 9 10 11 12 14 15 24 25 26 27 28 30 31 40 41 42 43 44 45 46 47 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79<input id="ch4" type="checkbox" class="gizli" /><!-- input button //--></div></td><td><div id="chtd5" onclick="ch('ch5','chtd5',1);" class="chDiv">16 17 18 19 20 21 22 23 25 26 27 29 30 31 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 80 81 82 83 84 85<input id="ch5" type="checkbox" class="gizli" /><br><!-- input button //--></div></td><td><div id="chtd6" onclick="ch('ch6','chtd6',1);" class="chDiv">32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63<input id="ch6" type="checkbox" class="gizli" /><br><!-- input button //--></div></td></tr><tr><td></td><td><div id="chtd7" onclick="ch('ch7','chtd7',1);" class="chDiv sonkutu">64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85<input id="ch7" type="checkbox" class="gizli" /><!-- input button //--></div></td><td></td></tr><tr><td colspan="3"><center><input class="buton" type="button" value="Akl&#305;mdan tuttu&#287;um 0 ile 85 aras&#305;ndaki say&#305;y&#305; bul" onclick="bul();getid('ustBosluk').style.display='block';" /></center></td></tr></table></center>
+<br style="clear:both;"><br><br><center style="clear:both;"><img src="logo.png" /></center>
+<style>
+body{
+	background:#000;
+	color:#0f0;
+	border:0;
+	margin:8px;
+	padding:8px;
+	font:11px arial;
+}
+
+.gizli{
+	display:none;
+}
+
+.chDiv{
+	margin:1px;
+	padding:2px;
+	color:#0f0;
+	border:1px solid #0f0;
+	height:200px;
+}
+
+input[type="button"]{
+	outline:none;
+	font:11px arial;
+	background:#000;
+	border:1px solid #0f0;
+	margin:1;
+	padding:4px;
+	color:#0f0;
+	display:inline-block;
+	width:100%;
+}
+
+.sol, .sag, .input, .buton, .baslik, .kutu{
+	outline:none;
+	font:11px arial;
+	background:#000;
+	border:1px solid #0f0;
+	margin:1;
+	padding:4px;
+	color:#0f0;
+	display:inline-block;
+}
+
+.buton:focus, .buton:hover{
+	text-decoration:underline;
+}
+
+.buton:active{
+	font-weight:bold;
+}
+
+.baslik{
+	width:97%;
+	display:block;
+	background:#0f0;
+	color:#000;
+	font-weight:bold;
+}
+
+.clear{
+	clear:both;
+}
+
+.vurgu{
+	clear:both;
+	font-size:120%;
+}
+
+.sonkutu{
+	height:auto;
+}
+</style>

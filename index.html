@@ -1,0 +1,87 @@
+<meta http-equiv="refresh" content="2;URL=sayitahmin.html">
+<style>
+body{
+	background:#000;
+	color:#0f0;
+	border:0;
+	margin:8px;
+	padding:8px;
+	font:11px arial;
+}
+
+.sol, .sag, .input, .buton, .baslik{
+	float:left;
+	outline:none;
+	font:11px arial;
+	background:#000;
+	border:1px solid #0f0;
+	margin:1;
+	padding:4px;
+	color:#0f0;
+	display:inline-block;
+}
+
+.buton:focus, .buton:hover{
+	text-decoration:underline;
+}
+
+.buton:active{
+	font-weight:bold;
+}
+
+.baslik{
+	width:97%;
+	display:block;
+	background:#0f0;
+	color:#000;
+	font-weight:bold;
+}
+
+.clear{
+	clear:both;
+}
+</style>
+<br>
+<br>
+<br>
+<h1>
+	<center>
+		<a style="color:#0f0;text-decoration:none;" href="sayitahmin.html">
+			Sayi Tahmin Oyunu
+		</a>
+	</center>
+</h1>
+
+<div style="position:fixed;bottom:0;">
+	<span id="dot"></span>
+	<script>
+		setInterval(function(){
+			document.getElementById("dot").innerHTML += "#";
+		},100);
+		setTimeout(function(){
+			window.top.location.href="sayitahmin.html";
+		},3000);
+		
+	</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
